@@ -4,11 +4,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return '<h1>Flask CI/CD Pipeline 🚀</h1><p>Deployed via Jenkins + Docker + Kubernetes</p>'
+    return '<h1>Flask CI/CD Pipeline 🚀</h1><p>Auto-Deployed via Jenkins + Docker + Kubernetes</p>'
 
 @app.route('/health')
 def health():
     return {'status': 'ok'}, 200
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000i)
