@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  flask-app:
+    image: bhavanigajanand/flask-cicd-app:latest
+    container_name: flask-app
+    ports:
+      - "80:5000"
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
